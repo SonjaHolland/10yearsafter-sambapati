@@ -4,130 +4,140 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chrome TV 16:9</title>
+<title>Luxury TV Screen</title>
 
 <style>
 
-html,body{
-    margin:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    background:#050505;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #050505;
 }
 
 /* TV Frame */
 
-#tv{
-    aspect-ratio:16/9;
+#tv {
 
-    width:min(96vw, calc(96vh * 16 / 9));
-    height:auto;
+    position: absolute;
 
-    padding:28px;
+    top: 50%;
+    left: 50%;
 
-    box-sizing:border-box;
+    transform: translate(-50%, -50%);
 
-    border-radius:0;
+    width: 98vw;
+    height: 98vh;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    border-radius: 18px;
 
     background:
-        linear-gradient(
-            135deg,
-            #080808 0%,
-            #555 8%,
-            #d9d9d9 18%,
-            #6f6f6f 30%,
-            #222 50%,
-            #c2c2c2 72%,
-            #444 88%,
-            #080808 100%
-        );
+    linear-gradient(
+        135deg,
+        #111 0%,
+        #666 10%,
+        #bbb 20%,
+        #444 35%,
+        #222 50%,
+        #777 70%,
+        #111 100%
+    );
 
     box-shadow:
-        0 0 40px rgba(0,0,0,.9),
-        0 0 120px rgba(0,0,0,.7),
-        inset 0 0 20px rgba(255,255,255,.18);
+        0 0 30px rgba(0,0,0,.9),
+        0 0 80px rgba(0,0,0,.6),
+        inset 0 0 10px rgba(255,255,255,.25);
 }
 
-/* Screen */
+/* Scherm */
 
-#screen{
-    position:relative;
-    width:100%;
-    aspect-ratio:16/9;
+#screen {
 
-    overflow:hidden;
+    position: relative;
 
-    background:#000;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: black;
 }
 
 /* Glasreflectie */
 
-#screen:before{
-    content:"";
-    position:absolute;
+#screen:before {
 
-    top:0;
-    left:-25%;
+    content: "";
 
-    width:45%;
-    height:100%;
+    position: absolute;
 
-    background:
-        linear-gradient(
-            110deg,
-            rgba(255,255,255,0),
-            rgba(255,255,255,.08),
-            rgba(255,255,255,0)
-        );
+    top: 0;
+    left: -40%;
 
-    z-index:2;
-    pointer-events:none;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        rgba(255,255,255,.00),
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.00)
+    );
+
+    z-index: 2;
+
+    pointer-events: none;
 }
 
-/* Blauwe LED */
+/* LED onderaan */
 
-#screen:after{
-    content:"";
+#screen:after {
 
-    position:absolute;
+    content: "";
 
-    left:50%;
-    bottom:8px;
+    position: absolute;
 
-    transform:translateX(-50%);
+    bottom: 6px;
+    left: 50%;
 
-    width:180px;
-    height:5px;
+    transform: translateX(-50%);
 
-    background:#00c8ff;
+    width: 120px;
+    height: 4px;
+
+    border-radius: 4px;
+
+    background: #00c8ff;
 
     box-shadow:
         0 0 10px #00c8ff,
         0 0 20px #00c8ff,
-        0 0 40px #00c8ff,
-        0 0 70px rgba(0,200,255,.9);
+        0 0 30px #00c8ff;
 
-    z-index:3;
+    z-index: 3;
 }
 
-iframe{
-    position:absolute;
-    inset:0;
+iframe {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
-    border:none;
+    border: none;
 
-    z-index:1;
+    position: relative;
+    z-index: 1;
 }
 
 </style>
 </head>
+
 <body>
 
 <div id="tv">
@@ -135,7 +145,10 @@ iframe{
     <div id="screen">
 
         <iframe
-            src="https://www.youtube.com/embed/ykllohKqRU4?autoplay=1&mute=1&controls=0&loop=1&playlist=ykllohKqRU4&rel=0&modestbranding=1"
+ src="https://www.youtube.com/embed/ykllohKqRU4
+?autoplay=1&controls=0&loop=1&playlist=ykllohKqRU4
+,JGJdU2dpYxg&rel=0&modestbranding=1&fs=1"
+
             allow="autoplay; fullscreen"
             allowfullscreen>
         </iframe>
@@ -146,3 +159,5 @@ iframe{
 
 </body>
 </html>
+
+
